@@ -1,0 +1,27 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int i;
+    do
+    {
+        i = get_int("Start size: ");
+    }
+    while (i < 9);
+
+    int f;
+    do
+    {
+        f = get_int("End size: ");
+    }
+    while (f < i);
+
+    int cont = 0;
+    while (i < f)
+    {
+        i = i + (int) i/3 - (int) i/4;
+        cont++;
+    }
+    printf("Years: %i\n", cont);
+}
